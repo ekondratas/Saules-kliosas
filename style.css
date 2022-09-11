@@ -121,7 +121,7 @@ html, body {
   height: 40px;
 
  /* arrowarrow */
-  background-image: url(/Misc/Arrow2.png);
+  background-image: url(./Misc/Arrow2.png);
   background-size: contain;
 }
 
