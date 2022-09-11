@@ -1,0 +1,237 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+html, body {
+  overflow: hidden;
+}
+
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 130vh;
+  position: fixed;
+  width: 100%;
+  transform: translateY(30vh);
+  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+.background:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.background:first-child {
+  background-image: url(/Misc/Kliosas.png);
+  transform: translateY(-15vh);
+}
+.background:first-child .content-wrapper {
+  transform: translateY(15vh);
+}
+.background:nth-child(2) {
+  background-image: url(/Misc/Image3.jpg);
+}
+.background:nth-child(3) {
+  background-image: url(/Misc/Img4.jpg);
+}
+
+.background:nth-child(4) {
+  background-image: url(/Misc/image5.jpg);
+  
+}
+
+/* Set stacking context of slides */
+.background:nth-child(1) {
+  z-index: 4;
+}
+
+.background:nth-child(2) {
+  z-index: 3;
+}
+
+.background:nth-child(3) {
+  z-index: 2;
+}
+
+.background:nth-child(4) {
+  z-index: 1;
+}
+
+.content-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column nowrap;
+  color: #fff;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  transform: translateY(40vh);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+}
+.content-title {
+  font-size: 8vh;
+  line-height: 1.4;
+}
+
+.background.up-scroll {
+  transform: translate3d(0, -15vh, 0);
+}
+.background.up-scroll .content-wrapper {
+  transform: translateY(15vh);
+}
+.background.up-scroll + .background {
+  transform: translate3d(0, 30vh, 0);
+}
+.background.up-scroll + .background .content-wrapper {
+  transform: translateY(30vh);
+}
+
+.background.down-scroll {
+  transform: translate3d(0, -132vh, 0);
+}
+.background.down-scroll .content-wrapper {
+  transform: translateY(15vh);
+}
+.background.down-scroll + .background:not(.down-scroll) {
+  transform: translate3d(0, -15vh, 0);
+}
+.background.down-scroll + .background:not(.down-scroll) .content-wrapper {
+  transform: translateY(15vh);
+}
+
+
+.arrow
+{
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+
+ /* arrowarrow */
+  background-image: url(/Misc/Arrow2.png);
+  background-size: contain;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+img {
+  position: absolute;
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 50px;
+  left: 100%;
+  margin-left: -100px;
+}
+
+.move {
+  position: fixed;
+  bottom: 120px;
+  left: 50%;
+  margin-left:-60px;
+  border: #fff;
+}
+
+/* News */
+
+#container{
+  background-image: linear-gradient(to top, rgba(205, 156, 242, 0.40) 0%, rgba(246, 255, 255, 0.71) 100%);
+  box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+  text-align: center;
+  border-radius: 5px;
+  margin: 3em auto;
+ 
+  height: 150px;
+  width: 350px;
+  padding: 1em;
+  
+  position: relative;
+  bottom: 100%;
+  right: 0;
+  left: 0;
+  top: 0; 
+  
+  
+}
+
+#container h2 {
+  background-image: linear-gradient(to left, rgba(41, 34, 37, 0.75) 0%, rgba(86, 88, 151, 0.86) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  margin: 0;
+  
+}
+#container p {
+   margin: 3px 0 1em 0;
+  font-size: 1em;
+  background-image: linear-gradient(to left, rgba(41, 34, 37, 0.75) 0%, rgba(86, 88, 151, 0.86) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+#container input {
+/*  background: rgba(255, 13, 254, 0.90); */
+  width: 210px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 2px;
+  background: #eee;
+  padding: 1em 2em;
+  outline: none;
+  border: none;
+  color: #222;
+  transition: 0.3s linear;
+}
+::placeholder{color: #999;}
+#container input:focus {background: rgba(0, 0, 333, 0.10);}
+
+#container button {
+  background-image: linear-gradient(to left, rgba(255, 146, 202, 0.75) 0%, rgba(145, 149, 251, 0.86) 100%);
+  box-shadow: 0 9px 25px -5px #df91fb;
+  padding: 0.5em 1.9em;
+  margin: 1em 0 0 0;
+  border-radius: 7px;
+  font-size: 1.4em;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  transition: 0.3s linear;
+
+}
+#container button:hover{transform: translatey(2px);}
+#container button:active{transform: translatey(5px);}
