@@ -185,7 +185,7 @@ img {
 #container h2 {
   background-image: linear-gradient(to left, rgba(41, 34, 37, 0.75) 0%, rgba(86, 88, 151, 0.86) 100%);
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+  
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size:cover;
@@ -199,7 +199,7 @@ img {
   font-size: 1em;
   background-image: linear-gradient(to left, rgba(41, 34, 37, 0.75) 0%, rgba(86, 88, 151, 0.86) 100%);
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  
 }
 
 #container input {
