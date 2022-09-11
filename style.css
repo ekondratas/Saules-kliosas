@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-html, body {
+html, .body {
   overflow: hidden;
 }
 
@@ -141,7 +141,7 @@ html, body {
   }
 }
 
-img {
+.img {
   position: absolute;
   width: 50px;
   display: block;
