@@ -30,21 +30,21 @@ html, body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .background:first-child {
-  background-image: url(/Misc/Kliosas.png);
+  background-image: url(Misc/Kliosas.png);
   transform: translateY(-15vh);
 }
 .background:first-child .content-wrapper {
   transform: translateY(15vh);
 }
 .background:nth-child(2) {
-  background-image: url(/Misc/Image3.jpg);
+  background-image: url(Misc/Image3.jpg);
 }
 .background:nth-child(3) {
-  background-image: url(/Misc/Img4.jpg);
+  background-image: url(Misc/Img4.jpg);
 }
 
 .background:nth-child(4) {
-  background-image: url(/Misc/image5.jpg);
+  background-image: url(Misc/image5.jpg);
   
 }
 
@@ -121,7 +121,7 @@ html, body {
   height: 40px;
 
  /* arrowarrow */
-  background-image: url(./Misc/Arrow2.png);
+  background-image: url(Misc/Arrow2.png);
   background-size: contain;
 }
 
